@@ -26,6 +26,7 @@ $shadow: 10px 10px lighten($text-color, 10%);
 
 /* 1.4 Responsive variables */
 $breakpoint-mobile: 768px;
+$breakpoint-middle: 1024px;
 
 /* -------------------------
         2. GLOBAL STYLES
@@ -69,21 +70,26 @@ body {
   justify-content: space-around;
   width: 80%;
   margin: 0 10%;
-  height: 500px;
+  height: 600px;
+}
+
+@media (max-width: $breakpoint-middle) {
+  .text-panels {
+    width: 90%;
+    margin: 0 5%;
+  }
 }
 
 @media (max-width: $breakpoint-mobile) {
   .text-panels {
-    display: flex;
     width: 100%;
     margin: 0;
-    height: 500px;
   }
 }
 
 .text-panel-left,
 .text-panel-right {
-  width: 40%;
+  width: 45%;
   height: 100%;
   box-shadow: $shadow;
   background-color: $panel-color;
