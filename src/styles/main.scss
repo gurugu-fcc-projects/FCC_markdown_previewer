@@ -56,12 +56,45 @@ body {
   height: 100vh;
 }
 
+/* -------------------------
+        4. HEADER
+------------------------- */
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.app-title {
+  order: 2;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .app-title {
+    order: 0;
+    padding-left: 10px;
+    margin-top: 0;
+    font-size: 1.2em;
+    text-align: left;
+  }
+}
+
 .help-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  align-self: flex-end;
   width: 40px;
   height: 40px;
+  margin: 20px;
   text-align: center;
   box-shadow: $shadow;
   background-color: lighten($panel-color, 15%);
@@ -72,28 +105,14 @@ body {
 
 @media (max-width: $breakpoint-mobile) {
   .help-button {
-    top: 10px;
-    right: 10px;
+    margin: 0;
+    // width: 35px;
+    // height: 35px;
     box-shadow: none;
-  }
-}
-
-/* -------------------------
-        4. HEADER
-------------------------- */
-
-.app-title {
-  padding-top: 20px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-@media (max-width: $breakpoint-mobile) {
-  .app-title {
-    padding-left: 10px;
-    margin-top: 0;
-    font-size: 1.2em;
-    text-align: left;
+    i {
+      font-size: 2.5em;
+      line-height: inherit;
+    }
   }
 }
 

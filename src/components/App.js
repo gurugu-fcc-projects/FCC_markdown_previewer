@@ -30,6 +30,9 @@ class App extends Component {
 
           <header>
             <h1 className="app-title">Markdown Previewer</h1>
+            <div className="help-button">
+              <i className="fa fa-question" aria-hidden="true"></i>
+            </div>
           </header>
 
           <div className="text-panels">
@@ -43,9 +46,9 @@ class App extends Component {
 
         </div>
 
-        <div className="help-button">
+        {/* <div className="help-button">
           <i className="fa fa-question" aria-hidden="true"></i>
-        </div>
+        </div> */}
 
       </div>
     );
