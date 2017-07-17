@@ -4,11 +4,15 @@ import { connect } from 'react-redux';
 import marked from 'marked';
 
 import * as actions from '../actions';
-import '../styles/App.css';
 
 class App extends Component {
   render() {
-    const { textCurrent, enterText, showHelp } = this.props;
+    const {
+      textCurrent,
+      isShowingHelp,
+      enterText,
+      showHelp,
+    } = this.props;
     const parsedText = marked(textCurrent, { sanitize: true});
     const processedText = { __html: parsedText };
 
@@ -19,6 +23,14 @@ class App extends Component {
           onChange={(event) => enterText(event.target.value)} />
         <span dangerouslySetInnerHTML={processedText}></span>
         <button onClick={showHelp}>Press me</button>
+        {/* <div className={`animated ${isShowingHelp && 'show'}`}></div> */}
+        <div className="help-button">
+          <i className="fa fa-question-circle-o" aria-hidden="true"></i>
+        </div>
+        <div className="text-panels">
+          <div className="text-panel-left"></div>
+          <div className="text-panel-right"></div>
+        </div>
       </div>
     );
   }

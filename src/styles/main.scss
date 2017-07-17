@@ -1,0 +1,63 @@
+/*------------------------------------------------------------------
+
+    [Table of contents]
+
+	1. VARIABLES
+	2. GLOBAL STYLES
+	3. APP STYLES
+
+-------------------------------------------------------------------*/
+
+/* -------------------------
+        1. VARIABLES
+------------------------- */
+
+$bg-color:    #FFCD38;
+$panel-color: #FFDD67;
+$text-color:  #4A4A4A;
+
+// $main-font: 'VT323', monospace;
+$main-font: 'Space Mono', monospace;
+
+/* -------------------------
+        2. GLOBAL STYLES
+------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+  font-family: $main-font;
+  color: $text-color;
+  background-color: $bg-color;
+}
+
+/* -------------------------
+        3. APP STYLES
+------------------------- */
+
+.text-panels {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 10%;
+  height: 500px;
+}
+
+.text-panel-left,
+.text-panel-right {
+  width: 40%;
+  height: 100%;
+  box-shadow: 20px 20px lighten($text-color, 10%);
+  background-color: $panel-color;
+}
+
+.help-button {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  i {
+    font-size: 2em;
+  }
+}
