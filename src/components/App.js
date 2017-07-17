@@ -18,19 +18,35 @@ class App extends Component {
 
     return (
       <div>
-        <textarea
+
+        {/* <textarea
           value={textCurrent}
           onChange={(event) => enterText(event.target.value)} />
         <span dangerouslySetInnerHTML={processedText}></span>
-        <button onClick={showHelp}>Press me</button>
+        <button onClick={showHelp}>Press me</button> */}
         {/* <div className={`animated ${isShowingHelp && 'show'}`}></div> */}
+
+        <div className="main-content">
+
+          <header>
+            <h1 className="app-title">Markdown Previewer</h1>
+          </header>
+
+          <div className="text-panels">
+            <div className="text-panel-left"></div>
+            <div className="text-panel-right"></div>
+          </div>
+
+          <footer>
+            <div>2017, created by Peter Krevenets</div>
+          </footer>
+
+        </div>
+
         <div className="help-button">
-          <i className="fa fa-question-circle-o" aria-hidden="true"></i>
+          <i className="fa fa-question" aria-hidden="true"></i>
         </div>
-        <div className="text-panels">
-          <div className="text-panel-left"></div>
-          <div className="text-panel-right"></div>
-        </div>
+
       </div>
     );
   }
