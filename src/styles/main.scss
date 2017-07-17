@@ -5,6 +5,9 @@
 	1. VARIABLES
 	2. GLOBAL STYLES
 	3. APP STYLES
+  4. HEADER
+  5. FOOTER
+  6. TEXT PANELS
 
 -------------------------------------------------------------------*/
 
@@ -53,6 +56,32 @@ body {
   height: 100vh;
 }
 
+.help-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  box-shadow: $shadow;
+  background-color: lighten($panel-color, 15%);
+  i {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .help-button {
+    top: 10px;
+    right: 10px;
+    box-shadow: none;
+  }
+}
+
+/* -------------------------
+        4. HEADER
+------------------------- */
+
 .app-title {
   padding-top: 20px;
   margin-top: 60px;
@@ -61,9 +90,27 @@ body {
 
 @media (max-width: $breakpoint-mobile) {
   .app-title {
-    font-size: 1.5em;
+    padding-left: 10px;
+    margin-top: 0;
+    font-size: 1.2em;
+    text-align: left;
   }
 }
+
+/* -------------------------
+        5. FOOTER
+------------------------- */
+
+footer {
+  text-align: center;
+  font-size: .8em;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+/* -------------------------
+        6. TEXT PANELS
+------------------------- */
 
 .text-panels {
   display: flex;
@@ -91,8 +138,14 @@ body {
 .text-panel-right {
   width: 45%;
   height: 100%;
+  padding: 10px;
   box-shadow: $shadow;
   background-color: $panel-color;
+}
+
+.text-panel-left {
+  resize: none;
+  border: 0;
 }
 
 @media (max-width: $breakpoint-mobile) {
@@ -103,25 +156,5 @@ body {
   }
   .text-panel-left {
     border-right: 6px solid $bg-color;
-  }
-}
-
-footer {
-  text-align: center;
-  font-size: .8em;
-  line-height: 30px;
-}
-
-.help-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  box-shadow: $shadow;
-  background-color: lighten($panel-color, 15%);
-  i {
-    font-size: 2.5em;
   }
 }

@@ -33,7 +33,7 @@ class App extends Component {
           </header>
 
           <div className="text-panels">
-            <div className="text-panel-left"></div>
+            <textarea className="text-panel-left"></textarea>
             <div className="text-panel-right"></div>
           </div>
 
