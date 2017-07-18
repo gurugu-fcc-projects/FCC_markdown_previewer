@@ -164,7 +164,30 @@ footer {
 
 .text-panel-left {
   resize: none;
+  outline: none;
+  overflow-x: hidden;
   border: 0;
+}
+
+.text-panel-right {
+  overflow: auto;
+}
+
+.text-panel-left::-webkit-scrollbar,
+.text-panel-right::-webkit-scrollbar {
+  width: 10px;
+}
+
+.text-panel-left::-webkit-scrollbar-track,
+.text-panel-right::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.text-panel-left::-webkit-scrollbar-thumb,
+.text-panel-right::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 
 @media (max-width: $breakpoint-mobile) {
