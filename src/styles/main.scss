@@ -157,11 +157,29 @@ header {
   resize: none;
   outline: none;
   overflow-x: hidden;
+  font-family: $main-font;
+  font-size: .95em;
+  color: $text-color;
   border: 0;
 }
 
 .text-panel-right {
+  font-size: .95em;
   overflow: auto;
+}
+
+@media (max-width: $breakpoint-middle) {
+  .text-panel-left,
+  .text-panel-right {
+    font-size: .8em;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .text-panel-left,
+  .text-panel-right {
+    font-size: .65em;
+  }
 }
 
 .text-panel-left::-webkit-scrollbar,
