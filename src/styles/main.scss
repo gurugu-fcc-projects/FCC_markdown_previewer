@@ -6,8 +6,8 @@
 	2. GLOBAL STYLES
 	3. APP STYLES
   4. HEADER
-  5. FOOTER
-  6. TEXT PANELS
+  5. TEXT PANELS
+  6. FOOTER
 
 -------------------------------------------------------------------*/
 
@@ -26,6 +26,7 @@ $main-font: 'Space Mono', monospace;
 
 /* 1.3 Visuals variables */
 $shadow: 10px 10px lighten($text-color, 10%);
+$shadow-active: 7px 7px lighten($text-color, 10%);
 
 /* 1.4 Responsive variables */
 $breakpoint-mobile: 768px;
@@ -99,8 +100,17 @@ header {
   text-align: center;
   box-shadow: $shadow;
   background-color: lighten($panel-color, 15%);
+  cursor: pointer;
+  transition: background-color .2s ease-out,
+              box-shadow .2s ease-out;
   i {
     font-size: 2.5em;
+  }
+  &:hover {
+    box-shadow: $shadow-active;
+  }
+  &:active {
+    box-shadow: none;
   }
 }
 
