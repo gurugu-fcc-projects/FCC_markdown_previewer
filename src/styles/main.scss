@@ -70,7 +70,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    // flex-grow: 2;
   }
 }
 
@@ -100,8 +99,7 @@ header {
   box-shadow: $shadow;
   background-color: lighten($panel-color, 15%);
   cursor: pointer;
-  transition: background-color .2s ease-out,
-              box-shadow .2s ease-out;
+  transition: box-shadow .2s ease-out;
   i {
     font-size: 2.5em;
   }
@@ -119,9 +117,15 @@ header {
     margin: 0;
     height: inherit;
     box-shadow: none;
+    transition: background-color .2s ease-out;
     i {
       font-size: 2.5em;
-      // line-height: inherit;
+    }
+    &:hover {
+      background-color: darken($panel-color, 25%);
+    }
+    &.active {
+      background-color: lighten($panel-color, 35%);
     }
   }
 }
@@ -231,4 +235,8 @@ footer {
   font-size: .8em;
   line-height: 30px;
   margin-top: 20px;
+  a {
+    text-decoration: none;
+    color: $text-color;
+  }
 }

@@ -35,8 +35,8 @@ Spain.
  *[Herman Fassett](https://freecodecamp.com/hermanfassett)*`;
 
 const INIT_STATE = {
-  textCurrent: 'this is user input',
-  textUser: 'this is user input',
+  textCurrent: '',
+  textUser: '',
   textHelp: help,
   isShowingHelp: false,
 };

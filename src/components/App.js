@@ -6,11 +6,6 @@ import marked from 'marked';
 import * as actions from '../actions';
 
 class App extends Component {
-  componentWillUpdate(nextProps) {
-    if (nextProps.isShowingHelp === true) {
-      document.querySelector('.text-panel-left').setAttribute('readonly', 'true');
-    }
-  }
 
   render() {
     const {
@@ -29,7 +24,9 @@ class App extends Component {
 
           <header>
             <h1 className="app-title">Markdown Previewer</h1>
-            <div onClick={showHelp} className="help-button">
+            <div
+              onClick={showHelp}
+              className={`help-button ${isShowingHelp && 'active'}`}>
               <i className="fa fa-question" aria-hidden="true"></i>
             </div>
           </header>
@@ -38,14 +35,16 @@ class App extends Component {
             <textarea
               value={textCurrent}
               onChange={(event) => enterText(event.target.value)}
-              className="text-panel-left"></textarea>
+              className="text-panel-left"
+              readOnly={isShowingHelp}></textarea>
             <div
               dangerouslySetInnerHTML={processedText}
               className="text-panel-right"></div>
           </div>
 
           <footer>
-            <div>2017, created by Peter Krevenets</div>
+            <div>2017, created by <a target="blank" href="https://github.com/GuRuGuMaWaRu">Peter Krevenets</a>
+            </div>
           </footer>
 
         </div>
