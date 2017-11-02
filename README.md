@@ -13,4 +13,4 @@ This time I went for a simple project, especially since the main part was alread
 - [ ] freecodecamp challenge: [https://www.freecodecamp.org/challenges/build-a-markdown-previewer](https://www.freecodecamp.org/challenges/build-a-markdown-previewer)
 
 ## Video Walkthrough
-![](https://github.com/gurugumawaru/FCC_recipe_box/blob/master/FCC_Markdown_Previewer.gif)
+![](https://github.com/GuRuGuMaWaRu/FCC_markdown_previewer/blob/master/FCC_Markdown_Previewer.gif)
