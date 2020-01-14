@@ -9,7 +9,7 @@ This time I went for a simple project, especially since the main part was alread
 
 ## Links
 - [ ] this project at codepen: [https://codepen.io/GuRuGu/pen/weVpQZ](https://codepen.io/GuRuGu/pen/weVpQZ)
-- [ ] this project at gh-pages: [https://gurugumawaru.github.io/FCC_markdown_previewer/](https://gurugumawaru.github.io/FCC_markdown_previewer/)
+- [ ] this project at gh-pages: [https://gurugu-fcc-projects.github.io/FCC_markdown_previewer/](https://gurugu-fcc-projects.github.io/FCC_markdown_previewer/)
 - [ ] freecodecamp challenge: [https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer)
 
 ## Video Walkthrough
